@@ -4,18 +4,24 @@
 
 ## Motivation
 
-Software-Systeme unterliegen durch wechselnde Anforderungen einem stetigem Wandel. Die Software-Entwicklung steht vor der Herausforderung einer evolutionären Software-Architektur.
+**_Software-Systeme_** unterliegen durch wechselnde Anforderungen einem stetigem Wandel. Die Software-Entwicklung steht vor der Herausforderung einer **_evolutionären Software-Architektur_**.
 
-Das Domain-Driven-Design und der Microservice-Ansatz addressieren diese Herausforderungen. Die Kapselung von Domänen-Funktionalitäten in Bounded Contexts erlauben eine inkrementelle und unabhängige Weiterentwicklung eines Systems.
+Das **_Domain-Driven-Design_** und der Microservice-Ansatz addressieren diese Herausforderungen. Die Kapselung von Domänen-Funktionalitäten in Bounded Contexts erlauben eine inkrementelle und unabhängige Weiterentwicklung eines Systems.
 
-Microservice-Architekturen erschweren allerdings die Dokumentation und die Erfassung der Beziehungen zwischen den beteiligten Komponenten und Systemen. Microservices abstraiieren Funktionalitäten und kommuniuieren über das Netzwerk per REST und Messaging (verteiltes System).
+**_Microservice-Architekturen erschweren allerdings die Dokumentation_** und die Erfassung der Beziehungen zwischen den beteiligten Komponenten und Systemen. Microservices abstraiieren Funktionalitäten und kommuniuieren über das Netzwerk per REST und Messaging (verteiltes System).
 
-Auf Ebene der Microservices erlaubt die statische Code-Analyse die Auflösung der internen Abhängigkeiten zwischen Modulen, Packages und Klassen. Eine Zyklenfreiheit kann mit bewähreten Werkzeugen zuverlässig festgestellt und visualisiert werden (JDepend, Sonar, etc.).
-Die Beziehungen zwischen Microservices sind allerdings nur indirekt über Schnittstellen-Aufrufe im Code oder anhand des Kommunikationsverhaltens zu Laufzeit sichtbar.
+Auf Ebene der Microservices erlaubt die statische Code-Analyse die **_Auflösung der internen Abhängigkeiten_** zwischen Modulen, Packages und Klassen. Eine Zyklenfreiheit kann mit bewähreten Werkzeugen zuverlässig festgestellt und visualisiert werden (JDepend, Sonar, etc.).
+**_Die Beziehungen zwischen Microservices sind allerdings nur indirekt über Schnittstellen-Aufrufe im Code oder anhand des Kommunikationsverhaltens zu Laufzeit sichtbar._**
 
-Unter der Prämisse "Dokumentation veraltet" erzeugt eine manuelle Aktualisierung der Microservice-Architektur zu einen unverhältnismäßig großen Aufwand. Die Dokumenation sollte daher zusammen mit dem Code versioniert werden und auf bereits bekannten Informationen basieren.
+Unter der Prämisse "Dokumentation veraltet" erzeugt eine manuelle Aktualisierung der Microservice-Architektur zu einen unverhältnismäßig großen Aufwand. **_Die Dokumenation soll zusammen mit dem Code versioniert werden und auf bereits bekannten Informationen basieren._**
 
-Diese Arbeit soll Möglichkeiten zur code-basierten Dokumentation von Software-Architekturen eruieren und prototypisch eine Lösung implementieren. Folgende Ansätze sollen beleuchtet werden:
+### Aufgabe
+
+Diese Arbeit soll Möglichkeiten zur code-basierten Dokumentation von Software-Architekturen eruieren und prototypisch eine Lösung implementieren.
+
+### Ansatz
+
+Folgende Ansätze sollen beleuchtet werden:
 
 Jeder Microservice stellt die Dokumentation zur inneren Struktur und der genutzten Services einheitlich in einem definierten Format bereit. Eine strukturierte Dokumentation gestattet eine maschinelle Analyse und Darstellung der Informationen.
 
@@ -27,6 +33,8 @@ Mit Hilfe der metadaten-basierten Schnittstellen-Dokumentation, wie Swagger (Ope
 Die Kommunikationsinfrastruktur, wie die Service Discovery, der Load-Balancer oder die Firewall, kann das Konsumieren der Service-Angebote, also die Kommunikationsbeziehungen zwischen den Microservices auflösen.
 
 Ein Service zum Architektur-Management aggregiert und visualisiert die bereitgestellten Informationen. Wünschenswert ist eine automatische Erzeugung der Software-Architektur auf Ebene der Kontext- und Struktursicht.
+
+---
 
 Werkzeuge für das Architektur-Management:
 
