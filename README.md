@@ -1,6 +1,40 @@
-# Bachelor-Arbeit
+# Titel
 
-Tags:
+> Code-basierte Dokumentation evolutionärer Software-Architekturen
+
+## Motivation
+
+Software-Systeme unterliegen durch wechselnde Anforderungen einem stetigem Wandel. Die Software-Entwicklung steht vor der Herausforderung einer evolutionären Software-Architektur.
+
+Das Domain-Driven-Design und der Microservice-Ansatz addressieren diese Herausforderungen. Die Kapselung von Domänen-Funktionalitäten in Bounded Contexts erlauben eine inkrementelle und unabhängige Weiterentwicklung eines Systems.
+
+Microservice-Architekturen erschweren allerdings die Dokumentation und die Erfassung der Beziehungen zwischen den beteiligten Komponenten und Systemen. Microservices abstraiieren Funktionalitäten und kommuniuieren über das Netzwerk per REST und Messaging (verteiltes System).
+
+Auf Ebene der Microservices erlaubt die statische Code-Analyse die Auflösung der internen Abhängigkeiten zwischen Modulen, Packages und Klassen. Eine Zyklenfreiheit kann mit bewähreten Werkzeugen zuverlässig festgestellt und visualisiert werden (JDepend, Sonar, etc.).
+Die Beziehungen zwischen Microservices sind allerdings nur indirekt über Schnittstellen-Aufrufe im Code oder anhand des Kommunikationsverhaltens zu Laufzeit sichtbar.
+
+Unter der Prämisse "Dokumentation veraltet" erzeugt eine manuelle Aktualisierung der Microservice-Architektur zu einen unverhältnismäßig großen Aufwand. Die Dokumenation sollte daher zusammen mit dem Code versioniert werden und auf bereits bekannten Informationen basieren.
+
+Diese Arbeit soll Möglichkeiten zur code-basierten Dokumentation von Software-Architekturen eruieren und prototypisch eine Lösung implementieren. Folgende Ansätze sollen beleuchtet werden:
+
+Jeder Microservice stellt die Dokumentation zur inneren Struktur und der genutzten Services einheitlich in einem definierten Format bereit. Eine strukturierte Dokumentation gestattet eine maschinelle Analyse und Darstellung der Informationen.
+
+Über den Build-Prozess sind allgemeine Informationen wie der Name, das
+Repository, die Build-Version und die verwendete Bibliotheken (z.B. Maven Dependencies) bekannt.
+
+Mit Hilfe der metadaten-basierten Schnittstellen-Dokumentation, wie Swagger (Open API Specification), liegt zur Kompilierzeit eine strukturierte Dokumenation des Service-Angebots vor.
+
+Die Kommunikationsinfrastruktur, wie die Service Discovery, der Load-Balancer oder die Firewall, kann das Konsumieren der Service-Angebote, also die Kommunikationsbeziehungen zwischen den Microservices auflösen.
+
+Ein Service zum Architektur-Management aggregiert und visualisiert die bereitgestellten Informationen. Wünschenswert ist eine automatische Erzeugung der Software-Architektur auf Ebene der Kontext- und Struktursicht.
+
+Werkzeuge für das Architektur-Management:
+
+- Structure 101
+- Gephi
+- jQAssistant
+
+#### Tags:
 
 - **`Discovery Service`**
 - **`REST`**
@@ -9,7 +43,13 @@ Tags:
 - **`Definition`**
 - ⭐ lesenswert
 
-## Motivation
+### Literatur
+
+- Microservices, Grundlagen flexibler Softwarearchitekturen, Eberhard Wolff, ISBN: 978-3-86490-313-7
+- Basiswissen Software-Architekturen, Verstehen, entwerfen, wiederverwenden, Thorsten Posch, Klaus Birken, Michael Gerdom, ISBN: 978-3-89864-736-6
+- ...
+
+## tl;dr;
 
 > Within microservices architecture the inverse occurs and system maintainers now pay the price. Learnability improves, code changes are in smaller batches and thus more fluid, yet the system maintainer how has additional moving parts to deal with.<br>
 > With containerization, deployment, and discovery now prominent in microservices architecture, a large transition occurs and trade off is made. A service will become less confusing, but holistic system complexity increases. We’re seeing that this complexity is worth paying the cost for.
@@ -18,7 +58,7 @@ Tags:
 
 > If your API uses calls that don’t run in the same environments, bug hunting becomes a chore. If your documentation is inconsistent with actual functionatliy, you risk confusing and segmenting your userbase.
 
-## Referenzen
+### Referenzen
 
 2019-02-20:
 
@@ -77,7 +117,7 @@ Tags:
 - ⭐ https://dzone.com/articles/patterns-for-microservices-sync-vs-async
 - ⭐ https://dzone.com/articles/centralized-documentation-in-microservice-spring-b
 
-### API Blueprint Example
+#### API Blueprint Example
 
 https://apiblueprint.org/
 
@@ -108,7 +148,7 @@ Hello World!
     + Attributes (array[Blog Post])
 ```
 
-### Swagger Example
+#### Swagger Example
 
 https://app.swaggerhub.com/apis/Andre_Lehnert_eXX/Demo/1.0.0
 
