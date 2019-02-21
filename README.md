@@ -13,7 +13,7 @@ Das **_Domain-Driven-Design_** und der Microservice-Ansatz addressieren diese He
 Auf Ebene der Microservices erlaubt die statische Code-Analyse die **_Auflösung der internen Abhängigkeiten_** zwischen Modulen, Packages und Klassen. Eine Zyklenfreiheit kann mit bewähreten Werkzeugen zuverlässig festgestellt und visualisiert werden (JDepend, Sonar, etc.).
 **_Die Beziehungen zwischen Microservices sind allerdings nur indirekt über Schnittstellen-Aufrufe im Code oder anhand des Kommunikationsverhaltens zu Laufzeit sichtbar._**
 
-Unter der Prämisse "Dokumentation veraltet" erzeugt eine manuelle Aktualisierung der Microservice-Architektur zu einen unverhältnismäßig großen Aufwand. **_Die Dokumenation soll zusammen mit dem Code versioniert werden und auf bereits bekannten Informationen basieren._**
+Unter der Prämisse "Dokumentation veraltet" erzeugt eine manuelle Aktualisierung der Microservice-Architektur zu einen unverhältnismäßig großen Aufwand. **_Die Dokumentation soll zusammen mit dem Code versioniert werden und auf bereits bekannten Informationen basieren._**
 
 ### Aufgabe
 
