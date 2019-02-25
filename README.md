@@ -45,9 +45,9 @@ Bei Option 2 werden zusätzlich die Beziehungen zu anderen Microservices aufgel�
 
 Werkzeuge für das Architektur-Management:
 
-- Structure 101
-- Gephi
-- jQAssistant
+- [Structure 101](https://structure101.com/)
+- [Gephi](https://gephi.org/)
+- [jQAssistant](https://jqassistant.org/)
 
 #### Tags:
 
