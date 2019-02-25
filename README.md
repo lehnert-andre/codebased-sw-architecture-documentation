@@ -31,10 +31,15 @@ Repository, die Build-Version und die verwendete Bibliotheken (z.B. Maven Depend
 
 Mit Hilfe der metadaten-basierten Schnittstellen-Dokumentation, wie Swagger (Open API Specification), liegt zur Kompilierzeit eine strukturierte Dokumenation des Service-Angebots vor.
 
-Optional:
+_Option 1_:<br>
 Die Kommunikationsinfrastruktur, wie die Service Discovery, der Load-Balancer oder die Firewall, kann das Konsumieren der Service-Angebote, also die Kommunikationsbeziehungen zwischen den Microservices auflösen.
 
-Ein Service zum Architektur-Management aggregiert und visualisiert die bereitgestellten Informationen. Wünschenswert ist eine automatische Erzeugung der Software-Architektur auf Ebene der Kontext- und Struktursicht.
+_Option 2_: <br>
+Über zusätzliche Meta-Daten werden die Bereitstellung und das Konsumierung von Service-Schnittstellen identifiziert. Diese Daten werden beim Build-Prozess erzeugt und bereitstellt.
+
+Ein Service zum Architektur-Management aggregiert und visualisiert die bereitgestellten Informationen.
+Wünschenswert ist eine automatische Erzeugung der Software-Architektur auf Ebene der Kontext- und Struktursicht.
+Bei Option 2 werden zusätzlich die Beziehungen zu anderen Microservices aufgelöst.
 
 ---
 
